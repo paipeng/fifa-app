@@ -1,7 +1,22 @@
 <html>
 <head>
-<title>FIFA Ranking</title>
+<title>FIFA Ranking App</title>
+    <script src="bower_components/angularjs/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="scripts/fifa-app.js"></script>
+    <script src="scripts/controllers/naviController.js"></script>
 </head>
-<body>
+<body data-ng-app="fifaApp">
+
+
+<div data-ng-controller="NavCtrl" >
+    <div ng-show="list===true">
+        list
+    </div>
+
+</div>
+
+
 </body>
 </html>
