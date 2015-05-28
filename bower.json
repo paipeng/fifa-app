@@ -1,0 +1,22 @@
+{
+  "name": "fifa-app",
+  "version": "0.0.1",
+  "authors": [
+    "Pai Peng <sipaipv6@gmail.com>"
+  ],
+  "description": "App for displaying FIFA ranking",
+  "main": "index.html",
+  "keywords": [
+    "AngularJS",
+    "FIFA"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.paipeng.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
