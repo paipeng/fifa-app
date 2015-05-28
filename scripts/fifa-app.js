@@ -6,7 +6,8 @@
 
 //var routingConfig;
 var app = angular.module('fifaApp', [
-    'ui.router'
+    'ui.router',
+    'ngResource'
 ]);
 
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {

@@ -3,18 +3,31 @@
 <title>FIFA Ranking App</title>
     <script src="bower_components/angularjs/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src ="bower_components/angular-resource/angular-resource.js"></script>
 
     <script src="scripts/fifa-app.js"></script>
     <script src="scripts/controllers/naviController.js"></script>
+
+    <script src="scripts/controllers/listRankingController.js"></script>
+
+
+    <script src="fifa/services/FifaRankingService.js"></script>
 </head>
 <body data-ng-app="fifaApp">
 
 
 <div data-ng-controller="NavCtrl" >
+    <div ng-show="list">
+        navi list
+    </div>
+
+</div>
+
+<div data-ng-controller="ListRankingCtrl" ng-show="listRanking">
+    <h1>List</h1>
     <div ng-show="list===true">
         list
     </div>
-
 </div>
 
 
