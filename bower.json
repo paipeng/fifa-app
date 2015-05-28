@@ -22,6 +22,8 @@
   "dependencies": {
     "angularjs": "~1.4.0",
     "angular-ui-router": "~0.2.15",
-    "angular-resource": "~1.4.0"
+    "angular-resource": "~1.4.0",
+    "bootstrap": "~3.3.4",
+    "angular-smart-table": "~2.0.3"
   }
 }
