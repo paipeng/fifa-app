@@ -3,10 +3,8 @@
  */
 
 
-var module = angular.module('fifa.RankingService', []);
-
-
-module.factory("Fifa", ['$http', function($http) {
+angular.module('fifa.RankingService', [])
+    .factory("Fifa", ['$http', function($http) {
 
     //'use strict';
 
@@ -14,7 +12,7 @@ module.factory("Fifa", ['$http', function($http) {
     return {
         getRanking: function() {
             return $http.get(url).success(function(response) {
-                return response;
+                return response.data;
             }).error(function(err) {
                 return null;
             });

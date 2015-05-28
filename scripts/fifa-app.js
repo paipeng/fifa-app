@@ -5,14 +5,15 @@
 'use strict';
 
 //var routingConfig;
-var app = angular.module('fifaApp', [
+var fifaApp = angular.module('fifaApp', [
     'ui.router',
-    'ngResource'
+    'ngResource',
+    'fifa.RankingService'
 ]);
 
-app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+fifaApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-    console.log("outoup loaded modules " + app.requires);
+    console.log("outoup loaded modules " + fifaApp.requires);
 
 }
 ]);

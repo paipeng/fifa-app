@@ -3,18 +3,9 @@
  */
 
 
-var app = angular.module('fifaApp', [
-    'fifa.RankingService'
-]);
-
-
-app.controller('NavCtrl', ['$rootScope', '$scope', 'Fifa',
-    function(rootScope, scope, Fifa) {
+fifaApp.controller('NavCtrl', ['$rootScope', '$scope',
+    function(rootScope, scope) {
         scope.list = true;
-        Fifa.getRanking().then(function(res) {
-            scope.rankingList = res;
-            console.log("ranking list " + JSON.stringify(res));
-        });
 
         //scope.rankingList = res;
 
