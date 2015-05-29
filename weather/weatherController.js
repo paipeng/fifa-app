@@ -3,10 +3,8 @@
  */
 
 
-var weatherModule = angular.module('weather.Module', [
-    'ui.router',
-    'ngResource'
-]).controller('weatherList', ['$rootScope', '$scope',
+angular.module('weather.Module')
+    .controller('weatherList', ['$rootScope', '$scope',
     function(rootScope, scope) {
         scope.list = true;
 

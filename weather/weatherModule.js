@@ -9,15 +9,12 @@ var weatherModule = angular.module('weather.Module', [
 
 weatherModule.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
-        console.log("output loaded modules " + weatherModule.requires);
+        console.log("weather.Module loaded " + weatherModule.requires);
 
-
-
-
-        $stateProvider.state('user.home', {
+        $stateProvider.state('weather', {
             url: '/weather',
-            templateUrl: '/weatherList.html',
-            controller: 'HomeCtrl'
+            templateUrl: '/weather/weatherList.html'
         });
+
     }
 ]);

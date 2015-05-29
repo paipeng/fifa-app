@@ -20,6 +20,7 @@ fifaApp.config(['$stateProvider', '$urlRouterProvider',
 
         $stateProvider.state('home', {
             url: '/home',
+            templateUrl: '/views/home.html'
         });
         $stateProvider.state('about', {
             url: '/about',
@@ -29,7 +30,6 @@ fifaApp.config(['$stateProvider', '$urlRouterProvider',
             url: '/ranking',
             templateUrl: '/views/rankingList.html'
         });
-
 
     }
 ])

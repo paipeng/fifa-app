@@ -21,7 +21,7 @@ fifaApp.controller('NavCtrl', ['$rootScope', '$scope',
             //var modules = loaded_modules.split(',');
             angular.forEach(loaded_modules, function(value, key) {
                 if (value === 'weather.Module') {
-                    rootScope.menuList.push('Weather');
+                    rootScope.menuList.push({name: 'Weather', url: '/weather'});
                 }
             })
             console.log("modules " + loaded_modules[0]);
