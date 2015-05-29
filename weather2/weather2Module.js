@@ -51,10 +51,10 @@ weatherModule
 
             function setWeatherForCountry(country) {
                 Weather.getCapitalByCountry(country).success(function(res) {
-                    console.log('getCapitalByCountry res ' + JSON.stringify(res));
+                    //console.log('getCapitalByCountry res ' + JSON.stringify(res));
                     var city = res[0].capital;
                     Weather.getWeatherByCity(city).success(function (res) {
-                        console.log('getWeatherByCity res ' + JSON.stringify(res));
+                        //console.log('getWeatherByCity res ' + JSON.stringify(res));
                         scope.weatherList.push({country: country, weather: res});
                     })
                 });
