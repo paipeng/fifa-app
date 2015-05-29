@@ -11,6 +11,9 @@ var fifaRankingModule = angular.module('fifa.RankingModule', [
 fifaRankingModule.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
         console.log("output loaded modules " + fifaRankingModule.requires);
-
+        $stateProvider.state('ranking', {
+            url: '/ranking',
+            templateUrl: '/fifa/views/rankingList.html'
+        });
     }
 ]);

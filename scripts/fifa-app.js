@@ -9,7 +9,6 @@ var fifaApp = angular.module('fifaApp', [
     'ui.router',
     'ngResource',
     'ui.bootstrap',
-    'fifa.RankingService',
     'fifa.RankingModule',
     'weather.Module'
 ]);
@@ -26,14 +25,11 @@ fifaApp.config(['$stateProvider', '$urlRouterProvider',
             url: '/about',
             templateUrl: '/views/about.html'
         });
-        $stateProvider.state('ranking', {
-            url: '/ranking',
-            templateUrl: '/views/rankingList.html'
-        });
+
 
     }
 ])
     .run(['$state', function ($state) {
-        $state.transitionTo('ranking');
+        $state.transitionTo('home');
     }])
 ;
