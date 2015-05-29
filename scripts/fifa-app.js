@@ -8,12 +8,32 @@
 var fifaApp = angular.module('fifaApp', [
     'ui.router',
     'ngResource',
-    'fifa.RankingService'
+    'ui.bootstrap',
+    'fifa.RankingService',
+    'fifa.RankingModule',
+    'weather.Module'
 ]);
 
-fifaApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+fifaApp.config(['$stateProvider', '$urlRouterProvider',
+    function ($stateProvider, $urlRouterProvider) {
 
-    console.log("outoup loaded modules " + fifaApp.requires);
 
-}
-]);
+        $stateProvider.state('home', {
+            url: '/home',
+        });
+        $stateProvider.state('about', {
+            url: '/about',
+            templateUrl: '/views/about.html'
+        });
+        $stateProvider.state('ranking', {
+            url: '/ranking',
+            templateUrl: '/views/rankingList.html'
+        });
+
+
+    }
+])
+    .run(['$state', function ($state) {
+        $state.transitionTo('home');
+    }])
+;
