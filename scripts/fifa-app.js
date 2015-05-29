@@ -9,7 +9,7 @@ var fifaApp = angular.module('fifaApp', [
     'ui.router',
     'ngResource',
     'ui.bootstrap',
-    'fifa.RankingModule2',
+    'fifa2.RankingModule',
     'weather.Module'
 ]);
 

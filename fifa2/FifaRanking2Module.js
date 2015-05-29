@@ -3,7 +3,7 @@
  */
 
 
-var fifaRankingModule = angular.module('fifa.RankingModule2', [
+var fifaRankingModule = angular.module('fifa2.RankingModule', [
     'ui.router',
     'ngResource',
     'fifa2.RankingService'
