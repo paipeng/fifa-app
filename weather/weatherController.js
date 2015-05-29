@@ -20,22 +20,28 @@ angular.module('weather.Module')
                 scope.countryList.push({country: 'Germany'});
                 scope.countryList.push({country: 'China'});
                 scope.countryList.push({country: 'France'});
+
+                angular.forEach(scope.countryList, function(value, key) {
+                    setWeatherForCountry(value.country);
+                });
+
+            } else {
+                angular.forEach(rootScope.rankingList, function(value, key) {
+                    setWeatherForCountry(value.Team);
+                })
             }
 
 
-            angular.forEach(scope.countryList, function(value, key) {
-                setWeatherForCountry(value.country, value);
-            });
         };
 
 
-        function setWeatherForCountry(country, value) {
+        function setWeatherForCountry(country) {
             Weather.getCapitalByCountry(country).success(function(res) {
                 console.log('getCapitalByCountry res ' + JSON.stringify(res));
                 var city = res[0].capital;
                 Weather.getWeatherByCity(city).success(function (res) {
                     console.log('getWeatherByCity res ' + JSON.stringify(res));
-                    value.weather = res;
+                    scope.weatherList.push({country: country, weather: res});
                 })
             });
         };

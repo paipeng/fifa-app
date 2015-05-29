@@ -1,2 +1,43 @@
-<div>Weather List 222</div>
-<div>{{text}}</div>
+
+<div ng-show="weatherList">
+    <h1>Weather List</h1>
+    <table st-table="displayed" class="table table-striped">
+        <thead>
+        <tr>
+            <th st-ratio="20" st-sort="firstName">Country</th>
+            <th st-ratio="20" st-sort="lastName">City</th>
+            <th st-ratio="10" st-sort="age">Weather</th>
+            <th st-ratio="30" st-sort="email">Temp</th>
+            <th st-ratio="20" st-sort="balance">Diff</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="row in weatherList">
+            <td st-ratio="20"><img src="http://img.fifa.com/images/flags/4/{{row['4']}}.png"> {{row.country | uppercase}}</td>
+            <td st-ratio="20">{{row.weather.name}}</td>
+            <td st-ratio="10">{{row.weather.weather[0].description}}</td>
+            <td st-ratio="10">{{row.weather.main.temp}}</td>
+            <td st-ratio="20">{{getDiff(row["Total Points"], row["Previous Points"])}}</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="5" class="text-center">
+                <div  st-items-by-page="20" st-pagination=""></div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+
+    <!--
+        <at-pagination at-list="rankingList" at-config="config"></at-pagination>
+        <table>
+            <tr ng-repeat="x in rankingList">
+                <td>{{ x.Team }}</td>
+                <td>{{ x.Country }}</td>
+            </tr>
+        </table>
+        -->
+</div>
+
+
