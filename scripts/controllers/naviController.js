@@ -31,8 +31,6 @@ fifaApp.controller('NavCtrl', ['$rootScope', '$scope',
         }
 
         scope.showLine = function() {
-            console.log("showLine "  + rootScope.menuList.length);
-
             if (rootScope.menuList && rootScope.menuList.length > 0) {
                 return true;
             } else {
