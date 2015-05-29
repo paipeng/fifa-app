@@ -19,7 +19,7 @@ fifaApp.controller('ListRankingCtrl', ['$rootScope', '$scope', 'Fifa',
         };
 
         Fifa.getRanking().then(function(res) {
-            scope.rankingList = res.data[0];
+            rootScope.rankingList = res.data[0];
             console.log("ranking list " + JSON.stringify(scope.rankingList[0]));
 
 

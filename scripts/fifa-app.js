@@ -34,6 +34,6 @@ fifaApp.config(['$stateProvider', '$urlRouterProvider',
     }
 ])
     .run(['$state', function ($state) {
-        $state.transitionTo('home');
+        $state.transitionTo('ranking');
     }])
 ;

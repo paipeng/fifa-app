@@ -4,7 +4,8 @@
 
 var weatherModule = angular.module('weather.Module', [
     'ui.router',
-    'ngResource'
+    'ngResource',
+    'weather.Service'
 ]);
 
 weatherModule.config(['$stateProvider', '$urlRouterProvider',
@@ -13,7 +14,8 @@ weatherModule.config(['$stateProvider', '$urlRouterProvider',
 
         $stateProvider.state('weather', {
             url: '/weather',
-            templateUrl: '/weather/weatherList.html'
+            templateUrl: '/weather/weatherList.html',
+            controller: 'weatherController'
         });
 
     }
