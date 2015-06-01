@@ -9,8 +9,8 @@ var fifaApp = angular.module('fifaApp', [
     'ui.router',
     'ngResource',
     'ui.bootstrap',
-    'fifa2.RankingModule',
-    'weather2.Module'
+    'fifa.RankingModule',
+    'weather.Module'
 ]);
 
 fifaApp.config(['$stateProvider', '$urlRouterProvider',
@@ -29,7 +29,27 @@ fifaApp.config(['$stateProvider', '$urlRouterProvider',
 
     }
 ])
-    .run(['$state', function ($state) {
+    .run(['$state', '$rootScope', function ($state, $rootScope) {
         $state.transitionTo('home');
+
+        $rootScope.menuList = [];
+        initMenu();
+
+        function initMenu() {
+            console.log("initMenu");
+            console.log("output loaded modules " + fifaApp.requires);
+            var loaded_modules = fifaApp.requires;
+            //var modules = loaded_modules.split(',');
+            angular.forEach(loaded_modules, function(value, key) {
+                if (value === 'weather.Module') {
+                    $rootScope.menuList.push({name: 'Weather', url: '/weather'});
+                } else if (value === 'fifa.RankingModule') {
+                    $rootScope.menuList.push({name: 'Fifa Ranking', url: '/ranking'});
+                }
+            })
+            console.log("modules " + loaded_modules[0]);
+
+        }
+
     }])
 ;

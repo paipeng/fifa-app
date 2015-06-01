@@ -1,1 +1,6 @@
 bower_components
+node_modules
+fifa/dist
+fifa/grunt
+weather/dist
+weather/grunt

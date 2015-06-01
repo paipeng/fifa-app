@@ -11,24 +11,6 @@ fifaApp.controller('NavCtrl', ['$rootScope', '$scope',
         //scope.rankingList = res;
 
         //scope.menuList = ['menu1', 'menu2'];
-        initMenu();
-
-        function initMenu() {
-            rootScope.menuList = [];
-            console.log("initMenu");
-            console.log("output loaded modules " + fifaApp.requires);
-            var loaded_modules = fifaApp.requires;
-            //var modules = loaded_modules.split(',');
-            angular.forEach(loaded_modules, function(value, key) {
-                if (value === 'weather2.Module') {
-                    rootScope.menuList.push({name: 'Weather', url: '/weather'});
-                } else if (value === 'fifa2.RankingModule') {
-                    rootScope.menuList.push({name: 'Fifa Ranking', url: '/ranking'});
-                }
-            })
-            console.log("modules " + loaded_modules[0]);
-
-        }
 
         scope.showLine = function() {
             if (rootScope.menuList && rootScope.menuList.length > 0) {
