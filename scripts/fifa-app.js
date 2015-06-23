@@ -19,11 +19,11 @@ fifaApp.config(['$stateProvider', '$urlRouterProvider',
 
         $stateProvider.state('home', {
             url: '/home',
-            templateUrl: '/views/home.html'
+            templateUrl: 'views/home.html'
         });
         $stateProvider.state('about', {
             url: '/about',
-            templateUrl: '/views/about.html'
+            templateUrl: 'views/about.html'
         });
 
 
