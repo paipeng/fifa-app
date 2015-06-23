@@ -13,7 +13,7 @@ angular.module('weather.Service', [])
 
         var url = "https://restcountries.eu/rest/v1/name/";
 
-        var weather_url = "http://api.openweathermap.org/data/2.5/weather?APPID=1935ce19500a433277db92080020ed37&q="
+        var weather_url = "https://webapp.paipeng.com/fifa-weather-rest?&q="
 
         function getCapitalByCountry(country) {
             return $http.get(url+country);
